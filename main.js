@@ -1,4 +1,6 @@
 const getPlace = require('./GetPlace/getPlace')
+const getWeather = require('./GetWeather/GetWeather')
+
 const argv = require('yargs').options({
     direccion: {
         alias: 'd',
@@ -7,5 +9,10 @@ const argv = require('yargs').options({
     }
 }).argv
 
-getPlace.getPlace(argv.direccion)
-        .then(console.log);
+//getPlace.getPlace(argv.direccion)
+//       .then(console.log);
+//
+getWeather.getWeather(5.060000,-75.519997)
+    .then(console.log)
+    .catch(console.log)
+    
